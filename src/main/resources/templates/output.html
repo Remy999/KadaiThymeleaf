@@ -4,8 +4,13 @@
     <title>Output Page</title>
 </head>
 <body>
-    <h2>Output Page</h2>
+<h2 style="text-align:left"> Thymeleaf 課題 <br>
+        出力画面 <br>
+
+
+</h2>
     <p th:text="${outputValue}"></p>
     <!-- 出力画面のHTMLコードを追加 -->
+     <a th:href="@{/input}">入力画面へ戻る</a>
 </body>
 </html>

@@ -11,7 +11,7 @@ public class OutputController {
     public String postOutput(@RequestParam("inputValue") String inputValue, Model model) {
         // 入力値を受け取って出力画面を表示するための処理
         // ここで必要な処理やデータを行い、結果をModelに追加してください
-        model.addAttribute("outputValue", "Processed value: " + inputValue);
+        model.addAttribute("outputValue", "入力された値は「 " + inputValue +"」です");
         return "output";
     }
 }

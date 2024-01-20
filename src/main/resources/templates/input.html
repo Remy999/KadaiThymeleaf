@@ -4,13 +4,15 @@
     <title>Input Page</title>
 </head>
 <body>
-    <h2>Input Page</h2>
-    <!-- 入力フォームなどのHTMLコードを追加 -->
- <form action="/output" method="post">
-        <label for="inputValue">Input Value:</label>
+    <h2 style="text-align:left"> Thymeleaf 課題 <br>
+        入力画面 <br>
+        値を入力してください
+
+</h2>
+    <form action="/output" method="post">
+        <label for="inputValue"></label>
         <input type="text" id="inputValue" name="inputValue" required>
-        <br>
-        <button type="submit">Submit</button>
+        <button type="submit">送信</button>
     </form>
 </body>
 </html>
