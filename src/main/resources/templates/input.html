@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Input Page</title>
+</head>
+<body>
+    <h2>Input Page</h2>
+    <!-- 入力フォームなどのHTMLコードを追加 -->
+ <form action="/output" method="post">
+        <label for="inputValue">Input Value:</label>
+        <input type="text" id="inputValue" name="inputValue" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
