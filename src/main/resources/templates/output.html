@@ -5,8 +5,11 @@
     <title>Output</title>
 </head>
 <body>
-    <h2>入力画面で入力された値:</h2>
-    <p th:text="'入力値: ' + ${inputValue}"></p>
+    <h2>
+      Thymeleaf 課題 <br>
+        出力画面 <br>
+        </h2>
+    <p th:text="'入力された値は「' + ${inputValue} +'」です' "></p>
 
     <a th:href="@{/input(previous=${inputValue})}">入力画面へ戻る</a>
 </body>
