@@ -7,12 +7,12 @@
 <body>
     <form action="/output" method="post">
         <label for="inputValue">
-        Thymeleaf 課題 <br>
-        入力画面 <br>
-        値を入力してください<br>
+<h1 th:text="#{content.title}"></h1>
+    <h2 th:text="#{content.inputgamen}"></h2>
+        <p th:text="#{content.inputorder}"></p>
+
         </label>
         <input type="text" id="inputValue" name="inputValue" th:value="${inputValue}" />
-
         <button type="submit">送信</button>
     </form>
 
