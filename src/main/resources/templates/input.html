@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Input Page</title>
+    <meta charset="UTF-8">
+    <title>Input Form</title>
 </head>
 <body>
-    <h2 style="text-align:left"> Thymeleaf 課題 <br>
-        入力画面 <br>
-        値を入力してください
-
-</h2>
     <form action="/output" method="post">
-        <label for="inputValue"></label>
-        <input type="text" id="inputValue" name="inputValue" required>
+        <label for="inputValue">
+        Thymeleaf 課題 <br>
+        入力画面 <br>
+        値を入力してください<br>
+        </label>
+        <input type="text" id="inputValue" name="inputValue" th:value="${inputValue}" />
+
         <button type="submit">送信</button>
     </form>
+
+    <div th:if="${previous != null}">
+        <p th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+    </div>
 </body>
 </html>

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Output Page</title>
+    <meta charset="UTF-8">
+    <title>Output</title>
 </head>
 <body>
-<h2 style="text-align:left"> Thymeleaf 課題 <br>
-        出力画面 <br>
+    <h2>入力画面で入力された値:</h2>
+    <p th:text="'入力値: ' + ${inputValue}"></p>
 
-
-</h2>
-    <p th:text="${outputValue}"></p>
-    <!-- 出力画面のHTMLコードを追加 -->
-     <a th:href="@{/input}">入力画面へ戻る</a>
+    <a th:href="@{/input(previous=${inputValue})}">入力画面へ戻る</a>
 </body>
 </html>
