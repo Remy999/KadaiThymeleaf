@@ -10,14 +10,13 @@
 <h1 th:text="#{content.title}"></h1>
     <h2 th:text="#{content.inputgamen}"></h2>
         <p th:text="#{content.inputorder}"></p>
-
-        </label>
-        <input type="text" id="inputValue" name="inputValue" th:value="${inputValue}" />
-        <button type="submit">送信</button>
-    </form>
-
     <div th:if="${previous != null}">
-        <p th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+        <label for="inputValue" th:text="#{previous.message(${previous})}"></label>
     </div>
+        </label>
+
+<p><input type="text" id="inputValue" name="inputValue" th:value="${inputValue}" />
+<button type="submit" th:text="#{button.submit}"></button>    </form></p>
+
 </body>
 </html>
